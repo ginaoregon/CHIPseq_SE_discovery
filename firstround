@@ -1,0 +1,14 @@
+step 1 transfer fastq to destination machine and folder using scp
+scp -i key_file.pem zhanggi@exacloud.ohsu.edu:/home/exacloud/lustre1/GoodmanLab/*.fq.gz /home/gina/
+
+step2 cat R1 and R2 files respectively
+
+cat *R1.fq.gz >H3K27R1.fq.gz
+cat *R2.fq.gz > H3K27R2.fq.gz
+
+step 3 random pick reads
+
+python ~/scripts/subsample.py H3K27*R1.fq.gz H3K27*R2.fq.gz randomsampleR1.fq.gz randomsampleR2.fq.gz
+
+step4 fastqc random picked files
+
