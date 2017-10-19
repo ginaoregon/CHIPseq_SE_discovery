@@ -1,0 +1,5 @@
+step 1 download data to local machine for random reads pick and fasqc
+scp -i key_file.pem zhanggi@exacloud.ohsu.edu:/home/exacloud/lustre1/GoodmanLab/*.fq.gz /home/gina/
+step 2 cat *R1.fq.gz > H3K27R1.fq.gz
+       cat *R2.fq.gz > H3K27R2.fq.gz
+step2 take 3000 random reads using 
