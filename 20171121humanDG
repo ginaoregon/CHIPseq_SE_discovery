@@ -1,0 +1,5 @@
+chip assay 
+library prep
+sequencing Nextseq550 PE 75
+bcl2fastq  nohup bcl2fastq -R ~/20171121 -o ~/bcl2fastq_out --with-failed-reads --no-lane-splitting --minimum-trimmed-read-length 20 --barcode-mismatches 2
+bowtie2 alignment
